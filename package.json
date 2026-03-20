@@ -1,0 +1,20 @@
+{
+  "name": "vigil",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,yellow \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:api": "cd backend && python3 -m uvicorn main:app --host 0.0.0.0 --port 8004 --reload",
+    "dev:web": "cd frontend && NEXT_PUBLIC_API_PORT=8004 npm run dev",
+    "install:all": "pip install -r backend/requirements.txt && cd frontend && npm install"
+  },
+  "dependencies": {
+    "next": "14.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "concurrently": "^8.2.2"
+  }
+}

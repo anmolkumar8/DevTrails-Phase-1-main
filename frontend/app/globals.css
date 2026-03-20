@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vigil-bg: #0a0e17;
+  --vigil-surface: #0f172a;
+}
+
+body {
+  background: var(--vigil-bg);
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+/* Subtle gradient background */
+.gradient-mesh {
+  background:
+    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(124, 58, 237, 0.14), transparent 50%),
+    radial-gradient(ellipse 50% 30% at 100% 100%, rgba(96, 165, 250, 0.06), transparent 50%),
+    radial-gradient(ellipse 40% 20% at 0% 100%, rgba(124, 58, 237, 0.05), transparent 50%);
+}
+
+/* Focus ring utility */
+*:focus-visible {
+  outline: 2px solid rgba(34, 211, 238, 0.5);
+  outline-offset: 2px;
+}
